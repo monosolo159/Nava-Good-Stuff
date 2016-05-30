@@ -7,69 +7,74 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.siranee.surisay.navagoodstuff.MainActivity"
+    tools:context="com.siranee.surisay.navagoodstuff.EditActivity"
     android:background="@drawable/bg">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="490sp"
-        android:background="#64ffffff">
+        android:background="#64ffffff" >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="รายชื่อของดีนาหว้า"
-            android:id="@+id/textView"
+            android:text="แก้ไขรายชื่อของดีนาหว้า"
+            android:id="@+id/textView3"
             android:background="#ffffff"
             android:gravity="center_vertical|center_horizontal"
             android:layout_margin="10dp"
             android:padding="20dp" />
 
-        <ListView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/listView" />
+            android:id="@+id/editTextEditName"
+            android:hint="ชื่อ" />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:minLines="10"
+            android:gravity="top|left"
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:id="@+id/editTextEditDetail"
+            android:hint="รายละเอียด" />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true" >
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="View"
-            android:id="@+id/btnView"
+            android:text="Back"
+            android:id="@+id/btnBack"
             android:layout_weight="1"
-            android:onClick="clickMainToView" />
+            android:onClick="clickEditToMain" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add"
-            android:id="@+id/btnAdd"
+            android:text="Update"
+            android:id="@+id/btnUpdate"
             android:layout_weight="1"
-            android:onClick="clickMainToAdd" />
+            android:onClick="clickEditToAddDB" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Edit"
-            android:id="@+id/btnEdit"
+            android:text="Clear"
+            android:id="@+id/btnClear"
             android:layout_weight="1"
-            android:onClick="clickMainToEdit" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Delete"
-            android:id="@+id/btnDel"
-            android:layout_weight="1"
-            android:onClick="clickMainToDelete" />
+            android:onClick="clickEditToClear" />
     </LinearLayout>
+
 </RelativeLayout>
