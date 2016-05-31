@@ -8,6 +8,8 @@ import android.widget.EditText;
 
 public class AddActivity extends AppCompatActivity {
 
+
+    ///
     private EditText edtName, edtDetail;;
     private String strName, strDetail;
     private DbSQLite dbSQLite;
